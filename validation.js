@@ -1,16 +1,29 @@
 // Step 1: Get the reference to the input element
 const emailInput = document.querySelector('.email-subscription');
+const buttonSubscription = document.querySelector('#subscribe');
+const buttonDismiss = document.querySelector('#dismiss');
+const newsletter = document.querySelector('.newsletter');
+const thanks_subscription = document.querySelector('.hidden');
 
-// Step 2: Add event listener to detect input changes
-emailInput.addEventListener('input', function() {
-  // Step 3: Validate the input using a regular expression for email
+
+buttonSubscription.addEventListener('click', function() {
+  //Validate the input using a regular expression for email
   const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const emailValue = emailInput.value.trim();
 
-  // Step 4: Update the CSS class based on validation
   if (emailPattern.test(emailValue)) {
-   //email is valid
+   newsletter.classList.add('hidden');
+   newsletter.classList.remove('newsletter');
+   thanks_subscription.classList.remove('hidden');
+   thanks_subscription.classList.add('thanks__subscription');
   } else {
-    //email is invalid
+    alert("Email is invalid, please enter a valid email")
   }
 });
+
+buttonDismiss.addEventListener('click', function() {
+   newsletter.classList.remove('hidden');
+   newsletter.classList.add('newsletter');
+   thanks_subscription.classList.add('hidden');
+   thanks_subscription.classList.remove('thanks__subscription');
+})

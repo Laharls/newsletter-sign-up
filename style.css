@@ -65,8 +65,13 @@
     color: var(--clr-neutral-charcoal-slate);
     font-size: 1rem;
 
-    /* display: grid;
-    place-content: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hidden{
+    display: none;
   }
 
   .button{
@@ -87,7 +92,6 @@
   .newsletter__title{
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    /* text-align: center; */
   }
 
   .newsletter__points{
@@ -125,7 +129,6 @@
   }
 
   .newsletter{
-    border: solid red;
     width: 100%;
   }
 
@@ -154,3 +157,47 @@
     left: 0;
     border-radius: 0px 0px 15px 15px;
   }
+
+  .thanks__subscription{
+    background-color: var(--clr-neutral-white);
+    margin: 2rem;
+    height: 150px;
+  }
+
+@media (min-width:924px){
+    .newsletter__img {
+        width: 83%;
+        height: 0;
+        padding-top: 427px; /* Set the aspect ratio (16:9), adjust as needed */
+        position: relative;
+        overflow: visible;
+    }
+
+    body{
+        background-color: var(--clr-neutral-dark-slate);
+    }
+
+    .newsletter{
+        background-color: var(--clr-neutral-white);
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 2rem;
+        border-radius: 0.5rem;
+        max-height: 545px;
+        max-width: 880px;
+    }
+
+      .newsletter__img img {
+        width: auto;
+        height: 118%;
+        object-fit: cover;
+        position: absolute;
+        top: 5%;
+        left: 32%;
+        border-radius: 15px;
+    }
+
+    .newsletter__content{
+        margin-top: 2rem;
+    }
+}

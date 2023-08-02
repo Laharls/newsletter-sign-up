@@ -20,7 +20,7 @@
 
   <section class="newsletter">
     <picture class="newsletter__img">
-      <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 550px)">
+      <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 924px)">
       <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Illustration sign up">
     </picture>
 
@@ -38,30 +38,30 @@
       <div class="newsletter__subscription">
         <div class="newsletter__email">
           <p>Email address</p>
-          <input type="email" placeholder="email@company.com">
+          <input type="email" placeholder="email@company.com" class="email-subscription">
         </div>
         
-        <button class="button">Subscribe to monthly newsletter</button>
+        <button class="button" id="subscribe">Subscribe to monthly newsletter</button>
       </div>
     </div>
-  
-    
   </section>
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
-  <!-- <section>
+  <section class="hidden">
     <h1>Thanks for subscribing!</h1>
 
     <p>
-      A confirmation email has been sent to ash@loremcompany.com. 
+      A confirmation email has been sent. 
       Please open it and click the button inside to confirm your subscription.
     </p>
 
-    <button>Dismiss message</button>
-  </section> -->
+    <button class="button" id="dismiss">Dismiss message</button>
+  </section>
   
   <!-- Success message end -->
+
+  <script src="./validation.js"></script>
 </body>
 </html>
